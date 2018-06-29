@@ -23,7 +23,7 @@ namespace replacer
             //Directory.EnumerateFiles(path,SearchOption.TopDirectoryOnly);
             Console.WriteLine(files.Count());
             foreach(var file in files){
-                Console.WriteLine(file);
+                Console.WriteLine(file.Name);
             }
         }
     }
