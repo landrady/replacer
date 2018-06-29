@@ -18,7 +18,9 @@ namespace replacer
         static void ReadFiles(string path){
             Console.WriteLine(path);
             Console.WriteLine("Carregando quantidade de arquivos na pasta.");
-            var files = Directory.EnumerateFiles(path,"*",SearchOption.TopDirectoryOnly);
+            DirectoryInfo di = new DirectoryInfo(path);
+            var files = di.EnumerateFiles();
+            //Directory.EnumerateFiles(path,SearchOption.TopDirectoryOnly);
             Console.WriteLine(files.Count());
             //foreach(var file in files){
                 //Console.WriteLine(file);
