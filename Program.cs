@@ -22,10 +22,9 @@ namespace replacer
             var files = di.EnumerateFiles().Take(100);
             //Directory.EnumerateFiles(path,SearchOption.TopDirectoryOnly);
             Console.WriteLine(files.Count());
-            //foreach(var file in files){
-                //Console.WriteLine(file);
-
-            //}
+            foreach(var file in files){
+                Console.WriteLine(file);
+            }
         }
     }
 }
