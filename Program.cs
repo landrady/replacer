@@ -19,7 +19,7 @@ namespace replacer
             Console.WriteLine(path);
             Console.WriteLine("Carregando quantidade de arquivos na pasta.");
             DirectoryInfo di = new DirectoryInfo(path);
-            var files = di.EnumerateFiles();
+            var files = di.EnumerateFiles().Take(100);
             //Directory.EnumerateFiles(path,SearchOption.TopDirectoryOnly);
             Console.WriteLine(files.Count());
             //foreach(var file in files){
